@@ -1,0 +1,396 @@
+.chat
+  position relative
+  z-index 1
+  border-radius: 16px;
+  +above($breakpoints.md)
+    border-radius: 18px;
+  +above($breakpoints.xxl)
+    border-radius: 20px;
+
+  &__container
+    color: #344644;
+    background-color: #f7f8f6;
+    overflow: hidden;
+    display: flex
+    gap: 8px
+    min-height: 400px
+    padding: 34px 13px 38px 13px
+    border-radius: inherit
+    +above($breakpoints.sm)
+      padding: 30px 20px
+    +above($breakpoints.md)
+      padding: 46px 30px
+      gap: 14px
+    +above($breakpoints.xxl)
+      gap: 20px
+      padding: 60px 90px 40px 70px
+      min-height: 600px
+
+  &__wrapper
+    position relative
+    width 100%
+
+  &__bot-avatar
+    div
+      position relative
+    img
+      height: auto
+      width 48px
+      +above($breakpoints.sm)
+        width 52px
+      +above($breakpoints.md)
+        width 70px
+      +above($breakpoints.xxl)
+        width 100px
+    span
+      background: #50D450
+      border-radius: 100%
+      height: 10px
+      width 10px
+      position: absolute
+      box-shadow: 0 0 6px rgba(0, 255, 0, 0.7);
+      animation: pulseStatus 1.8s infinite ease-out;
+      bottom: 2px
+      right 2px
+      +above($breakpoints.md)
+        bottom: 4px
+        right 4px
+      +above($breakpoints.xxl)
+        bottom: 4px
+        right 4px
+        height: 12px
+        width 12px
+      @keyframes pulseStatus {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+          box-shadow: 0 0 6px rgba(0, 255, 0, 0.7);
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 0.8;
+          box-shadow: 0 0 12px rgba(0, 255, 0, 0.5);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+          box-shadow: 0 0 6px rgba(0, 255, 0, 0.7);
+        }
+      }
+
+  &__status
+    margin: 30px 0 0 0
+    div
+      display: flex
+      align-items: center
+      gap: 14px
+
+.response-options
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0
+  gap: 6px;
+  +above($breakpoints.md)
+    gap: 8px;
+    margin: 16px 0
+  +above($breakpoints.xxl)
+    gap: 10px;
+    margin: 20px 0
+  &:last-child
+    margin-bottom: 0
+
+  button
+    border: none
+    border-radius: 10px;
+    color: $color-white
+    background: #9fb088;
+    font-family: "Involve-Regular"
+    font-weight: 400
+    cursor: pointer;
+    line-height: 140%
+    outline: none
+    text-align: center
+    font-size: 15px;
+    padding: 10px
+    min-width: 36%
+    transition: 0.3s
+    +above($breakpoints.sm)
+      min-width: 16%
+      padding: 12px
+      max-width: 46%
+      max-width: 32.5%
+      font-size: 14px;
+    +above($breakpoints.md)
+      font-size: 16px;
+      padding: 12px 14px
+    +above($breakpoints.xxl)
+      border-radius: 20px;
+      max-width: 32.5%
+      padding: 16px
+      font-size: 18px;
+    &:hover
+      background: #6A725D
+  &--main
+    button
+      text-align: left
+      display: inline-block
+  &--2
+    button
+      color: $color-white
+      border: none
+      padding: 10px 2px
+      +above($breakpoints.sm)
+        padding: 12px
+      +above($breakpoints.xxl)
+        padding: 16px
+      &:nth-child(1)
+        background: #3390ec;
+        border: 1px solid #3390ec;
+      &:nth-child(2)
+        background: #0cc143;
+        border: 1px solid #0cc143;
+      &:nth-child(3)
+        background: #6D5DEB
+        border: 1px solid #6D5DEB
+      &:hover
+        background-color: #d3d0f3;
+        border: 1px solid #d3d0f3;
+
+.message
+  display: flex;
+  align-items: flex-start;
+  line-height: 140%
+  font-size: 15px
+  +above($breakpoints.sm)
+    font-size: 14px
+  +above($breakpoints.md)
+    font-size: 16px
+  +above($breakpoints.xxl)
+    font-size: 18px
+
+.message p
+  margin: 0;
+  padding: 10px;
+  max-width: 100%;
+  font-family: "Involve-Regular"
+  font-weight: 400
+  +above($breakpoints.sm)
+    max-width: 74%;
+    padding: 12px
+  +above($breakpoints.xxl)
+    padding: 16px 24px
+
+.bot-message
+  flex-direction: row;
+  margin: 0 0 6px 0;
+  +above($breakpoints.xxl)
+    margin: 0 0 10px 0;
+  &:last-child
+    margin: 0
+  br
+    display: block
+
+.user-message
+  flex-direction: row-reverse;
+  text-align: right;
+  margin: 12px 0
+  +above($breakpoints.sm)
+    margin: 16px 0
+    text-align: center
+  +above($breakpoints.xxl)
+    margin: 20px 0
+
+.bot-message p
+  background: $color-white
+  max-width 100%
+  border-radius: 0 10px 10px 10px;
+  color: #1b2410;
+  +above($breakpoints.sm)
+    max-width unset
+    display: inline-block
+  +above($breakpoints.xxl)
+    border-radius: 0 20px 20px 20px;
+  span
+    display: flex
+    gap: 2px
+    margin: 0 0 8px 0
+    &:last-of-type
+      margin: 0
+    span
+      display: block
+      margin: 0
+
+.user-message p
+  background: linear-gradient(136deg, #6a725d 0%, #8b967c 100%);
+  font-family: "Involve-Regular"
+  color: $color-white
+  min-width: 5%
+  border-radius: 10px 10px 0 10px;
+  text-align: right
+  +above($breakpoints.sm)
+    max-width: 70%
+  +above($breakpoints.xxl)
+    border-radius: 20px 20px 0 20px
+
+.typing-indicator
+  div
+    margin: 12px 0 0 0
+    display: flex;
+    gap: 2px;
+    opacity: 0;
+    font-size: 14px;
+    color: #282e3b;
+    white-space: nowrap
+    opacity: 1;
+    animation: fadeEffect 4.5s infinite;
+
+@keyframes fadeEffect
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+
+.typing-indicator span
+  display: block
+  animation: typing-bounce 1.4s infinite ease-in-out;
+
+.typing-indicator.active
+  opacity: 1;
+
+.typing-indicator span:nth-child(1)
+  animation-delay: 0s;
+
+.typing-indicator span:nth-child(2)
+  animation-delay: 0.4s;
+
+.typing-indicator span:nth-child(3)
+  animation-delay: 0.6s;
+
+@keyframes typing-bounce
+  0%, 80%, 100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+
+.textarea-container
+  display: flex
+  flex-direction: column
+  gap: 10px
+  margin: 20px 0
+  &:last-child
+    margin: 20px 0 0 0
+  textarea
+    resize: none
+    width 100% !important
+    border: 1px solid #2a2521;
+    color: black
+    border-radius: 10px
+    height: 100px
+    padding-top: 16px
+  .btn
+    width 244px
+    margin: 0 auto
+    height: 50px
+    +above($breakpoints.sm)
+      border-radius: 10px
+      height: auto
+      min-height: 100%
+
+.dynamic-form
+  display: flex
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width 100%
+  +above($breakpoints.sm)
+    width unset
+    display: block
+  &__box
+    display: flex
+    gap: 6px
+    flex-direction: column
+    width 100%
+    +above($breakpoints.sm)
+      width unset
+      flex-direction: row
+    +above($breakpoints.sm)
+      gap: 8px
+  .input__field
+    +above($breakpoints.sm)
+      width 180px
+    +above($breakpoints.md)
+      width 200px
+    +above($breakpoints.xxl)
+      width 243px
+  .btn
+    margin: 0
+    width 100%
+    +above($breakpoints.sm)
+      width 180px
+    +above($breakpoints.md)
+      width 200px
+    +above($breakpoints.xxl)
+      width 243px
+  .agree
+    font-size: 13px
+    margin: 14px 0 0 0
+    +above($breakpoints.sm)
+      font-size: 11px
+    +above($breakpoints.md)
+      font-size: 12px
+    +above($breakpoints.xxl)
+      font-size: 13px
+    .error--privacy
+      right 0
+      margin: 4px 0 0 0
+      +above($breakpoints.sm)
+        right auto
+        margin: 7px 0 0 0
+    &__label
+      +above($breakpoints.sm)
+        align-items: center
+    &__custom
+      margin: 0
+
+.swiper-chat
+  max-width 246px
+  margin: 14px 0
+  +above($breakpoints.sm)
+    max-width: 502px
+  +above($breakpoints.md)
+    max-width: 612px
+  +above($breakpoints.xxl)
+    max-width: 730px
+  .swiper-bullets
+    display: flex !important
+    margin: 14px 0 0 0
+
+.card-swiper
+  position relative
+  width 246px
+  height: 138px
+  border-radius: 12px
+  +above($breakpoints.md)
+    width 300px
+    height: 169px
+    border-radius: 14px
+  +above($breakpoints.xxl)
+    width 360px
+    height: 203px
+    border-radius: 16px
+  img
+    border-radius: inherit
+    width 100%
+    height: auto
+
+.map-chat
+  margin: 0 0 10px 0
+  width: 100%;
+  margin: 0 0 10px 0
+  border-radius: 12px;
+  overflow: hidden;
+  height: 240px;
+  +above($breakpoints.md)
+    height: 300px;
+  +above($breakpoints.xxl)
+    height: 400px;

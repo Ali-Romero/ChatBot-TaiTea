@@ -1,0 +1,34 @@
+
+.video
+  padding: 0
+
+  &__wrapper
+    overflow: hidden
+    position: relative;
+    height: 178px;
+    width: 320px;
+    display: flex
+    justify-content: center
+    align-items: center
+    +above($breakpoints.sm)
+      height: 320px;
+      width: 570px;
+    +above($breakpoints.md)
+      height: 400px
+      width: 710px
+
+  &__wrapper iframe
+    position: absolute
+    display: block
+    top: 0;
+    left: 0;
+    bottom: 0
+    right 0
+    width: 100%;
+    height: 100%;
+    border: none;
+
+.fancybox-button svg
+  background: rgba(34, 34, 34, 0.56);
+  color: white
+  border-radius: 4px

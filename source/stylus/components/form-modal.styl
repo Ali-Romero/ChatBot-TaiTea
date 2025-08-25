@@ -1,0 +1,80 @@
+.form-modal
+  &__feedback
+    color: #3d3d3d;
+    background: linear-gradient(180deg, #f4f5f9 0%, #dee3e9 100%);
+    border-radius: 14px
+    padding: 32px 2px 32px 2px;
+    +above($breakpoints.sm)
+      padding: 38px 10px 24px 10px
+    +above($breakpoints.md)
+      padding: 40px 6px 30px 6px
+    +above($breakpoints.xxl)
+      padding: 44px 8px
+      border-radius: 20px
+
+  &__info-title
+    font-size: 18px;
+    line-height: 120%
+    margin: 0 0 20px 0
+    font-family: "STYRENEALC-MEDIUM"
+    font-weight: 500
+    +above($breakpoints.sm)
+      font-size: 19px;
+    +above($breakpoints.md)
+      font-size: 21px
+      margin: 0 0 22px 0
+    +above($breakpoints.xxl)
+      margin: 0 0 20px 0
+      font-size: 24px
+    br
+      display: block
+
+  &__feedback-item
+    max-width: 270px
+    margin: 0 auto
+    +above($breakpoints.sm)
+      max-width: 220px
+    +above($breakpoints.md)
+      max-width: 280px
+    +above($breakpoints.xxl)
+      max-width: 330px
+
+  &__feedback-input
+    height: 50px
+    margin-bottom: 7px
+    +above($breakpoints.sm)
+      margin-bottom: 8px
+      height: 44px
+    +above($breakpoints.md)
+      height: 50px
+    +above($breakpoints.xxl)
+      height: 60px
+      margin-bottom: 10px
+
+  &__button
+    margin-bottom: 14px
+
+  &__button
+    margin-bottom: 14px
+
+  &__agree
+    margin: 14px 0 0 0
+    .agree
+      font-size: 13px
+      +above($breakpoints.sm)
+        font-size: 11px
+      +above($breakpoints.md)
+        font-size: 11px
+      +above($breakpoints.xxl)
+        font-size: 12px
+      .error--privacy
+        right 0
+        margin: 4px 0 0 0
+        +above($breakpoints.sm)
+          margin: 7px 0 0 0
+      &__label
+        justify-content: center
+        align-items: center
+      &__custom
+        margin: 0
+        top: -2px

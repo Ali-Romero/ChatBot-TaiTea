@@ -1,0 +1,53 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Начните зарабатывать от 1,3 млн ₸ ежемесячно на продаже bubble tea, мороженого и десертов")
+    meta(property="og:image" content="path/to/image.jpg")
+    meta(name="HandheldFriendly" content="True")
+    meta(name="MobileOptimized" content="width")
+
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+
+    if production
+      // стили для font-icons
+      // link(rel="stylesheet", href="icons/icons.min.css")
+      // стили для svg-sprites
+      //- link(rel="stylesheet", href="svg/svg-symbols.min.css")
+      link(rel="stylesheet", href="css/vendor.min.css")
+      link(rel="stylesheet", href="css/reset.min.css")
+      link(rel="stylesheet", href="css/main.min.css")
+    else
+      // стили для font-icons
+      // link(rel="stylesheet", href="icons/icons.css")
+      // стили для svg-sprites
+      //- link(rel="stylesheet", href="svg/svg-symbols.css")
+      link(rel="stylesheet", href="css/vendor.css")
+      link(rel="stylesheet", href="css/reset.css")
+      link(rel="stylesheet", href="css/main.css")
+
+    block head
+      title «TaiTea» - Франшиза бара безалкогольных напитков
+
+  body
+    block body
+    include ../components/Privacy
+
+    block scripts
+      if production
+        script(src="js/vendor.min.js")
+        script(src="js/validation.min.js")
+        script(src="js/feedback.min.js")
+        script(src="js/scenario.min.js")
+
+        block prod-scripts
+
+      else
+        script(src="js/vendor.js")
+        script(src="js/validation.js")
+        script(src="js/feedback.js")
+        script(src="js/scenario.js")
+
+        block dev-scripts

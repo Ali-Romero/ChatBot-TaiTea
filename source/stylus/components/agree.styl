@@ -1,0 +1,114 @@
+
+.agree
+  line-height: 1.7;
+  font-family: "Involve-Regular"
+  font-weight: 400
+  position relative
+  font-size: 13px;
+  color: #3d3d3d;
+  +above($breakpoints.sm)
+    font-size: 12px;
+  +above($breakpoints.md)
+    font-size: 13px;
+  +above($breakpoints.xxl)
+    font-size: 14px;
+  a
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    display: block
+    margin: 8px 0 0 0
+    +above($breakpoints.sm)
+      display: inline
+  .error
+    transition: 0.3s
+  .error--privacy
+    position: absolute
+    left: 0
+    right 0
+    text-align: center
+    top: 100%
+    color: $color-error
+    line-height: 120%
+    margin: 6px 0 0 0
+    font-size: 11px
+    +above($breakpoints.sm)
+      right auto
+      font-size: 9px
+      margin: 6px 0 0 0
+    +above($breakpoints.md)
+      font-size: 11px
+    +above($breakpoints.xxl)
+      margin: 10px 0 0 0
+      font-size: 12px
+
+  &__label
+    position relative
+    padding: 0 0 0 26px
+    +above($breakpoints.sm)
+      padding: 0
+      position: unset
+      display: flex
+      align-items: flex-start
+      cursor pointer
+      gap: 8px
+    +above($breakpoints.md)
+      gap: 10px
+    +above($breakpoints.xxl)
+      gap: 12px
+
+  &__checkbox
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    pointer-events: none;
+
+  &__custom
+    position: absolute !important
+    left: 0
+    top: -2px
+    width: 18px;
+    display: inline-block
+    height: 18px;
+    border: 1px solid #3d3d3d;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s;
+    padding: 6px
+    transition: 0.3s
+    +above($breakpoints.sm)
+      top: -1px
+      margin: 2px 0 0 0
+      position: relative !important
+
+  &__checkbox:checked + .agree__custom::after
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 10px;
+    border: solid #007bff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &__custom::after
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid #007bff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+  &__label:hover .agree__custom
+    border-color: #007bff;
+    transform: scale(1.1)

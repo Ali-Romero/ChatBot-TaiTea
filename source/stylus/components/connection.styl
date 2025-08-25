@@ -1,0 +1,22 @@
+.connection
+  &__link
+    background: $color-primary
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: "STYRENEALC-REGULAR"
+    color: $color-white
+    font-weight: 500
+    height: 34px
+    border-radius: 100px
+    font-size: 12px
+    line-height: normal
+    width 150px
+    transition: 0.3s
+    transform: scale(1)
+    +above($breakpoints.xxl)
+      font-size: 14px
+      height: 38px;
+      width: 172px;
+    &:hover
+      transform: scale(1.05)

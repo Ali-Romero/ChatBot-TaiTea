@@ -1,0 +1,94 @@
+.main-section
+  width 100%
+  position relative
+  max-width: 1920px
+  margin: 0 auto
+  width 100%
+
+  &__inner
+    padding: 12px 0 0 0
+    +above($breakpoints.sm)
+      padding: 24px 0 0 0
+    +above($breakpoints.md)
+      padding: 30px 0 0 0
+    +above($breakpoints.xxl)
+      padding: 40px 0 0 0
+
+  &__title
+    margin: 0 0 10px 0
+    color: $color-primary
+    +above($breakpoints.sm)
+      margin: 0 0 20px 0
+    +above($breakpoints.md)
+      margin: 0 0 38px 0
+    +above($breakpoints.xxl)
+      margin: 0 0 50px 0
+
+  &__description
+    position relative
+    z-index 1
+    display: inline-block
+    background-color: $color-primary
+    color: $color-white
+    margin: 0 0 268px 0
+    padding: 10px 20px
+    border-radius: 14px
+    +above($breakpoints.sm)
+      margin: 0 0 40px 0
+      padding: 10px 20px
+      border-radius: 14px
+    +above($breakpoints.md)
+      margin: 0 0 60px 0
+      padding: 14px 30px
+      border-radius: 16px
+    +above($breakpoints.xxl)
+      margin: 0 0 100px 0
+      padding: 20px 40px
+      border-radius: 20px
+    img
+      position: absolute
+      z-index -1
+      height: auto
+      left: 100%
+      transform: rotate(119.49deg);
+      margin: 0 0 0 -7px;
+      bottom: -86px;
+      width: 84px;
+      +above($breakpoints.sm)
+        transform: rotate(113.49deg)
+        margin: 0 0 0 18px
+        bottom: -20px
+        width 56px
+      +above($breakpoints.md)
+        margin: 0 0 0 26px
+        bottom: -30px
+        width 76px
+      +above($breakpoints.xxl)
+        margin: 0 0 0 42px
+        bottom: -60px
+        width 113px
+    br
+      display: inline-block
+
+  &__chat
+    position: relative
+    z-index 22
+
+  &__image
+    position: absolute
+    pointer-events: none
+    bottom: 99%
+    right: calc(50% - 142px)
+    +above($breakpoints.sm)
+      right: 14px
+    +above($breakpoints.md)
+      right: 80px
+    +above($breakpoints.xxl)
+      right: 92px
+    img
+      height: auto
+      width 300px
+      +above($breakpoints.md)
+        width 400px
+      +above($breakpoints.xxl)
+        width 531px

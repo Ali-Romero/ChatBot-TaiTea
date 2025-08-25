@@ -1,0 +1,77 @@
+.footer
+  position: relative
+  z-index 3
+  line-height: 120%
+  font-size: 14px
+  +above($breakpoints.sm)
+    font-size: 13px
+  +above($breakpoints.md)
+    font-size: 16px
+  +above($breakpoints.xxl)
+    font-size: 19px
+
+  &__row
+    margin: 0 0 0 auto
+    padding: 24px 0
+    text-align: center
+    display: flex
+    flex-direction: column
+    border-radius: 16px
+    +above($breakpoints.sm)
+      border-radius: 100px
+      flex-direction: row
+      text-align: left
+      justify-content: space-between
+      align-items: center
+      padding: 24px 0
+    +above($breakpoints.md)
+      padding: 30px 0
+    +above($breakpoints.xxl)
+      padding: 40px 0
+
+  &__col
+    margin: 0 0 14px 0
+    +above($breakpoints.sm)
+      margin: 0
+    &:last-child
+      margin: 0
+
+  &__container
+    display: flex
+    align-items: center
+    flex-direction: column
+    gap: 4px
+    +above($breakpoints.sm)
+      flex-direction: row
+      gap: 20px
+    +above($breakpoints.md)
+      gap: 30px
+    +above($breakpoints.xxl)
+      gap: 54px
+
+  &__description
+    line-height: 140%
+    display: block
+    font-size: 14px
+    +above($breakpoints.md)
+      font-size: 15px
+    +above($breakpoints.xxl)
+      font-size: 16px
+
+  &__logo
+    img
+      height: auto
+      width 150px
+      margin: auto
+      margin: 0 auto
+      +above($breakpoints.sm)
+        width 110px
+      +above($breakpoints.md)
+        width 130px
+      +above($breakpoints.xxl)
+        width 196px
+
+  &__privacy
+    color: #b1b7a8;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;

@@ -1,0 +1,76 @@
+@font-face
+  font-family: "Involve-Regular"
+  src: url('../fonts/Involve-Regular.woff'), url('../fonts/Involve-Regular.woff2')
+  font-display: swap
+@font-face
+  font-family: "Involve-Bold"
+  src: url('../fonts/Involve-Bold.woff'), url('../fonts/Involve-Bold.woff2')
+  font-display: swap
+
+@import 'common/variables'
+@import 'common/*'
+@import 'components/*'
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow: hidden
+  position relative
+
+  &--thanks
+    font-size: 13px
+    line-height: 130%
+    color: $color-black
+    position relative
+    z-index 1
+    +above($breakpoints.xxl)
+      font-size: 16px
+    .header
+      &__connection
+        display: none
+
+  &__container
+    flex: 1
+    display: flex
+    position relative
+    flex-direction: column;
+    &--main
+      position relative
+      background-image: url('../images/bg-decor.jpg')
+      background-repeat: no-repeat
+      background-size: 45px auto;
+      background-position: calc(50% - 130px) 224px;
+      +above($breakpoints.sm)
+        background-size: contain
+        background-repeat: repeat-y
+        background-position: calc(50% - 410px) top
+      +above($breakpoints.md)
+        background-position: calc(50% - 550px) top
+      +above($breakpoints.xxl)
+        background-position: calc(50% - 750px) top
+      &:before
+        content: none
+        +above($breakpoints.sm)
+          content: ""
+          position: absolute
+          top: 0
+          bottom: 0
+          width 100vw
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          background-image: url('../images/main-bg.jpg')
+          background-repeat: repeat
+          background-position: left top
+          background-size: contain
+          left calc(50% - -132px)
+        +above($breakpoints.md)
+          left calc(50% - -183px)
+        +above($breakpoints.xxl)
+          left calc(50% - -239px)
+
+  &__content
+    flex: 1
+    display: flex
+    justify-content: center;
+    align-items: center
+    width 100%

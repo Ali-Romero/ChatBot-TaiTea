@@ -1,0 +1,88 @@
+.thanks-section
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1
+  width: 100%
+  color: $color-white
+  position relative
+  &:before
+    content: ""
+    position: absolute
+    background-image: url('../images/main-bg.jpg')
+    background-repeat: repeat
+    background-position: left top
+    background-size: contain
+    left: 0
+    right 0
+    top: 10px
+    bottom: 10px
+    margin: 0 2px
+    border-radius: 12px
+    +above($breakpoints.sm)
+      margin: 0 10px
+      top: 12px
+      bottom: 12px
+    +above($breakpoints.md)
+      border-radius: 30px
+      margin: 0 14px
+      top: 14px
+      bottom: 14px
+    +above($breakpoints.xxl)
+      border-radius: 40px
+      margin: 0 20px
+      top: 20px
+      bottom: 20px
+
+  &__inner
+    padding: 36px 0
+    text-align: center
+    position relative
+    z-index 3
+    +above($breakpoints.sm)
+      padding: 50px 0
+    +above($breakpoints.md)
+      padding: 70px 0
+    +above($breakpoints.xxl)
+      padding: 100px 0
+
+  &__title
+    margin-bottom: 11px;
+    font-size: 19px
+    line-height: 120%
+    font-weight: bold
+    +above($breakpoints.sm)
+      font-size: 21px
+    +above($breakpoints.md)
+      font-size: 26px
+    +above($breakpoints.xxl)
+      font-size: 34px
+      margin-bottom: 20px
+
+  &__title-helper
+    font-size: 16px
+    line-height: 120%
+    margin-bottom: 30px
+    +above($breakpoints.sm)
+      font-size: 18px
+    +above($breakpoints.md)
+      font-size: 22px
+    +above($breakpoints.xxl)
+      font-size: 20px
+      margin-bottom: 40px
+    br
+      display: block
+      +above($breakpoints.sm)
+        display: none
+
+  &__btn
+    max-width: 260px
+    margin: 0 auto
+    +above($breakpoints.sm)
+      max-width: 220px
+    +above($breakpoints.md)
+      max-width: 250px
+    +above($breakpoints.xxl)
+      max-width: 290px
+    .btn
+      background: #9FB088
