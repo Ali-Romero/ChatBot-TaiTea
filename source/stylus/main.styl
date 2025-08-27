@@ -36,12 +36,10 @@
     position relative
     flex-direction: column;
     &--main
-      position relative
-      background-image: url('../images/bg-decor.jpg')
-      background-repeat: no-repeat
-      background-size: 45px auto;
-      background-position: calc(50% - 130px) 224px;
       +above($breakpoints.sm)
+        position relative
+        background-image: url('../images/bg-decor.jpg')
+        background-repeat: no-repeat
         background-size: contain
         background-repeat: repeat-y
         background-position: calc(50% - 410px) top

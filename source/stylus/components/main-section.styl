@@ -17,6 +17,8 @@
   &__title
     margin: 0 0 10px 0
     color: $color-primary
+    position relative
+    z-index 44
     +above($breakpoints.sm)
       margin: 0 0 20px 0
     +above($breakpoints.md)
@@ -26,7 +28,7 @@
 
   &__description
     position relative
-    z-index 1
+    z-index 44
     display: inline-block
     background-color: $color-primary
     color: $color-white
@@ -50,8 +52,8 @@
       z-index -1
       height: auto
       left: 100%
-      transform: rotate(119.49deg);
-      margin: 0 0 0 -7px;
+      transform: rotate(123.49deg)
+      margin: 0 0 0 -15px;
       bottom: -86px;
       width: 84px;
       +above($breakpoints.sm)
@@ -74,21 +76,49 @@
     position: relative
     z-index 22
 
-  &__image
+  &__image-container
     position: absolute
     pointer-events: none
-    bottom: 99%
-    right: calc(50% - 142px)
+    z-index 2
+    bottom: 100%
+    right: calc(50% - 67px)
     +above($breakpoints.sm)
-      right: 14px
+      right: 30px
     +above($breakpoints.md)
-      right: 80px
+      right: 70px
     +above($breakpoints.xxl)
       right: 92px
+
+  &__image
     img
       height: auto
-      width 300px
+      width 220px
+      border-radius: 14px 14px 0 0;
       +above($breakpoints.md)
-        width 400px
+        width 310px
+        border-radius: 20px 20px 0 0;
       +above($breakpoints.xxl)
-        width 531px
+        border-radius: 30px 30px 0 0;
+        width 418px
+
+  &__image-decor
+    position: absolute
+    top: -5px;
+    right: -29px
+    +above($breakpoints.sm)
+      top: -10px
+      right -20px
+    +above($breakpoints.md)
+      top: -12px
+      right -24px
+    +above($breakpoints.xxl)
+      top: -15px
+    img
+      height: auto
+      width 58px
+      +above($breakpoints.sm)
+        width 60px
+      +above($breakpoints.md)
+        width 84px
+      +above($breakpoints.xxl)
+        width 112px

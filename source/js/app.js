@@ -265,7 +265,7 @@ function showTypingIndicator(delay) {
 
 async function appendBotMessageWithDelay(message, key) {
   const delayMap = {
-    'text': message.value ? Math.min(message.value.length * 0, 4000) : 0,
+    'text': message.value ? Math.min(message.value.length * 18, 4000) : 0,
     'swiper': 2000,
     'map': 1000,
   }
